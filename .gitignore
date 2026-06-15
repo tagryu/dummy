@@ -1,0 +1,9 @@
+node_modules
+.next
+.env.local
+.env*.local
+.vercel
+data
+
+# 원본 이미지 소스(빌드엔 public/assets 사용)
+assets/
