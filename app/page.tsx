@@ -92,7 +92,7 @@ export default function Page() {
         <div className="wrap">
           <span className="eyebrow">● 인플루언서 협업 제안</span>
           <h1>
-            <span className="grad">나와 어울리는 상품</span>
+            <span className="grad">태그하고 싶은 상품</span>
             <br />
             을 직접 골라보세요
           </h1>
@@ -124,7 +124,7 @@ export default function Page() {
 
           <p className="benefit-promise">
             초기에 TAG를 믿고 함께해주신 인플루언서분들을 위해, 저희도
-            노력하겠습니다.
+            노력하겠습니다. 추가로 드릴 수 있는 혜택도 꾸준히 고민하겠습니다.
           </p>
         </div>
       </section>
