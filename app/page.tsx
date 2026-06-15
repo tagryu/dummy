@@ -30,7 +30,6 @@ const BENEFITS = [
 export default function Page() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [name, setName] = useState("");
-  const [insta, setInsta] = useState("");
   const [done, setDone] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
@@ -59,7 +58,6 @@ export default function Page() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim(),
-          insta: insta.trim(),
           products: selectedProducts.map((p) => ({ id: p.id, name: p.name })),
         }),
       });
@@ -199,8 +197,7 @@ export default function Page() {
               <h3>제출이 완료되었습니다</h3>
               <p>
                 {name}님, 총 <b>{selectedProducts.length}개</b>의 상품을 셀렉해
-                주셔서 감사합니다. 확인 후
-                {insta.trim() ? ` 인스타그램(${insta.trim()})으로` : ""} 연락드리겠습니다.
+                주셔서 감사합니다.
               </p>
               <button
                 className="btn-ghost"
@@ -242,15 +239,6 @@ export default function Page() {
                     value={name}
                     placeholder="성함을 입력해 주세요"
                     onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
-                <div className="field">
-                  <label>인스타그램 아이디 <span className="opt">(선택)</span></label>
-                  <input
-                    type="text"
-                    value={insta}
-                    placeholder="@아이디"
-                    onChange={(e) => setInsta(e.target.value)}
                   />
                 </div>
                 <button
